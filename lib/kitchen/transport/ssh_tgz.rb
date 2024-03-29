@@ -1,8 +1,10 @@
 # -*- encoding: utf-8 -*-
 #
 # Author:: Peter Smith (<peter@petersmith.net>)
+# Author:: Noah Kantrowitz (<noah@coderanger.net>)
 #
 # Copyright (C) 2015, Peter Smith.
+# Copyright (C) 2017, Noah Kantrowitz.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +21,7 @@
 require "kitchen"
 require "kitchen/tgz"
 require "kitchen/transport/ssh"
+require "kitchen/transport/sshtgz_version"
 
 require "net/ssh"
 require "net/scp"
@@ -37,6 +40,7 @@ module Kitchen
     #
     class SshTgz < Kitchen::Transport::Ssh
 
+      plugin_version Kitchen::Transport::SSHTGZ_VERSION
       def finalize_config!(instance)
         super.tap do
           if defined?(Kitchen::Verifier::Inspec) && instance.verifier.is_a?(Kitchen::Verifier::Inspec)

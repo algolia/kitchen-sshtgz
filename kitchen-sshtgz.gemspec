@@ -25,6 +25,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'zlib', '~> 1.0'
   spec.add_runtime_dependency 'tempfile' , '~> 0.2.1'
 
-  spec.add_development_dependency 'bundler', '~> 0'
-  spec.add_development_dependency 'rake', '~> 0'
+  spec.add_development_dependency 'bundler', '~> 1.17', '>= 1.17.2'
+  spec.add_development_dependency 'rake', '~> 12.3', '>= 12.3.3'
 end

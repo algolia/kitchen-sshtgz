@@ -14,9 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/algolia/kitchen-sshtgz'
   spec.license       = 'Apache-2.0'
 
-  #spec.files         = `git ls-files`.split($/)
-  #spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.files         = ['lib/kitchen/tgz.rb', 'lib/kitchen/transport/ssh_tgz.rb']
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{(^(\.[a-z]+))|(^(test|spec|features)/)}) }
   spec.executables   = []
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']

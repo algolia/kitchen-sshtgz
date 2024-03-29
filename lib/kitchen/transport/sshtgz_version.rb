@@ -14,6 +14,6 @@
 
 module Kitchen
   module Transport
-    SSHTGZ_VERSION = '1.0.3'.freeze
+    SSHTGZ_VERSION = '1.0.4'.freeze
   end
 end
